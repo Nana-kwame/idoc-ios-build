@@ -1,0 +1,51 @@
+
+.diag{
+    background: url('assets/background.whitebg.svg') no-repeat;
+    position: absolute;
+    z-index: 1;
+    width:100%;
+    top: 0;
+    height: 60%
+}
+
+.sliderIcon{
+    margin-top:40%;
+    font-size: 7em;
+}
+
+.slider h2{
+    margin-top: 80% !important;
+    font-weight: bold;
+    font-size: 1em;
+}
+p{
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    font-size: .9em;
+}
+
+.swiper-pagination-bullet-active{
+    background: #f53d3d;
+
+}
+
+.swiper-pagination{
+    bottom: 12% !important;
+
+}
+
+#skip{
+    position: absolute;
+    left: 20px;
+    width: 85%;
+    bottom: 15px;
+    background: none !important;
+    text-align: center;
+    cursor: pointer;
+    z-index: 5;
+}
+
+
+
+

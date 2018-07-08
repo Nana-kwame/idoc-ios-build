@@ -1,0 +1,70 @@
+<ion-header>
+
+  <ion-navbar color=header>
+    <ion-title class="header">
+      <h5>Notifications</h5>
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+
+  <div *ngIf="!loginParams">
+    <ion-card class="card">
+      <ion-card-header>
+        <div class="card-icon">
+          <ion-icon ios="ios-mail-outline" md="md-mail"></ion-icon>
+        </div>
+      </ion-card-header>
+      <div class="card-title">
+        <h4>Message Inbox</h4>
+      </div>
+
+      <div class="card-content">
+        <p class="pFont">Sign up to recieve messages and notifications from hospitals about appointments, upcoming visitations and medication
+          reminders
+        </p>
+        <button ion-button class="button" color="header" (click)="onSignUp()">Sign Up</button>
+      </div>
+
+    </ion-card>
+    <div class="sign-in">
+      <h6>Already have an account?
+        <button ion-button outline small color="header" (click)="onLogin()">SIGN IN</button>
+      </h6>
+    </div>
+  </div>
+
+  <div *ngIf='loginParams'>
+
+    <ion-spinner name="bubbles" *ngIf="newNots.length ==0"></ion-spinner>
+    
+    <ion-list *ngFor="let nots of newNots">
+      <div *ngIf="nots">
+        
+        <ion-item-sliding>
+          <ion-item class="list" (click)="addReminder(nots)">
+            <h2>Hospital: {{nots.hospitalName}}</h2>
+            <h6>Message: {{nots.message}}</h6>
+          </ion-item>
+          <ion-item-options>
+            <button ion-button color="danger" (click)="onDelete(nots)">
+              <ion-icon name="remove-circle"></ion-icon>
+              <p>Delete</p>
+            </button>
+          </ion-item-options>
+        </ion-item-sliding>
+      </div>
+      <ion-label *ngIf="!nots">
+        {{text}}
+      </ion-label>
+    </ion-list>
+
+
+  </div>
+
+
+</ion-content>

@@ -1,0 +1,40 @@
+page-home{
+
+  .header h5{
+    color: white;
+    font-size: 20px
+    //background: linear-gradient(to right, #da4453, #89216b);
+}
+.card-background-page {
+  background: linear-gradient(to right, #EFEFF0, #eef2f3);
+  
+  ion-card {
+    position: relative;
+    text-align: center;
+  
+  }
+
+  .card-title {
+    
+    position: absolute;
+    top: 36%;
+    font-size: 2.0em;
+    width: 100%;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+  }
+
+  .card-subtitle {
+    font-size: 1.5em;
+    position: absolute;
+    top: 52%;
+    width: 100%;
+    color: rgb(168, 228, 252);
+  }
+  .card{
+    
+    border-radius: 15px;
+  }
+
+}
+}

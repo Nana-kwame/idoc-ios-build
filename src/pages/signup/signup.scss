@@ -1,0 +1,63 @@
+
+    page-signup {
+       
+        .header h5{
+            color: whitesmoke;
+            
+           // background: linear-gradient(to right, #614385, #516395);
+        }
+ 
+        // scroll-content {
+        //     display: flex;
+        //     flex-direction: column;
+        // }
+ 
+        // ion-item {
+        //     border-radius: 30px !important;
+        //     padding-left: 10px !important;
+        //     margin-bottom: 10px;
+        //     background-color: #f6f6f6;
+        //     opacity: 0.7;
+        //     font-size: 0.9em;
+        // }
+ 
+        // ion-list {
+        //     margin: 0;
+        // }
+ 
+        .heading-text {
+            flex: 1;
+            align-items: center;
+            text-align: center;
+        }
+ 
+        .heading-text h3 {
+            color: #fff;
+        }
+ 
+ 
+        .account-form {
+            
+            flex: 1;
+        }
+ 
+        .continue-button {
+            width: 100%;
+            border-radius: 30px;
+            margin-top: 30px;
+            font-size: 0.9em;
+            background-color:#154561 ;
+            border: 1px solid #fff;
+        }
+
+        .profilePicture {
+            position: relative;
+            left: 40%;
+            background-color: grey;
+            height: 70px;
+            width:70px;
+            border-radius: 50%;
+            border: 1px solid rgba(88, 86, 86, 0.77); 
+        }
+    }
+        

@@ -1,0 +1,40 @@
+<!-- This is actually the search page -->
+
+<ion-header>
+  <ion-navbar color=header>
+    <ion-title class="header">
+    <h5>  Search</h5>
+    </ion-title>
+    <ion-buttons start>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    </ion-buttons> 
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content  class="card-background-page">
+    
+  <div *ngIf="loginParams">
+      <ion-card *ngFor="let region of hospitalCollection" [navPush]="hospitalsPage" [navParams]="{data1:region,data2:loginParams}" class="card">
+          <img src="{{region.background}}"/>
+          <div class="card-title">{{region.region | uppercase}}</div>
+          <div class="card-subtitle">{{region.hospitals.length}} Hospitals</div>
+    
+          </ion-card>
+  </div>
+
+  
+  <div *ngIf="!loginParams">
+    <ion-card *ngFor="let region of hospitalCollection" [navPush]="hospitalsPage" [navParams]="{data1:region}" >
+      <img src="{{region.background}}"/>
+      <div class="card-title">{{region.region | uppercase}}</div>
+      <div class="card-subtitle">{{region.hospitals.length}} Hospitals</div>
+
+      </ion-card>
+</div>
+ 
+</ion-content>
+
+

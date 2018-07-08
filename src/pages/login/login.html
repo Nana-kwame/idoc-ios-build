@@ -1,0 +1,45 @@
+<ion-header>
+
+  <ion-navbar color="header">
+    <ion-title class="header">
+      <h5>Login</h5>
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="onDismiss()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-row>
+    <ion-col>
+      <ion-list class="account-form">
+        <ion-item>
+          <ion-label floating>
+            <ion-icon ios="ios-mail-open" md="md-mail-open"></ion-icon>
+            Email
+          </ion-label>
+          <ion-input [(ngModel)]="email" type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>
+            <ion-icon ios="ios-lock" md="md-lock"></ion-icon>
+            Password
+          </ion-label>
+          <ion-input [(ngModel)]="password" type="password"></ion-input>
+        </ion-item>
+
+      </ion-list>
+    </ion-col>
+  </ion-row>
+
+  <div>
+    <button  ion-button (click)="login(credentials)"  class="continue-button">Login</button>
+    <button  ion-button  (click)="onRegister()" class="continue-button"> Sign Up</button>
+  </div>
+
+</ion-content>

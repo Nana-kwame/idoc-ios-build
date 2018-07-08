@@ -1,0 +1,111 @@
+<ion-header>
+
+  <ion-navbar color="header">
+    <ion-title class="header">
+      <h5>SignUp</h5>
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="onDismiss()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list class="account-form" inset>
+
+
+    <ion-item>
+
+      <ion-label floating>
+        <ion-icon ios="ios-person" md="md-person"></ion-icon>
+        First Name
+      </ion-label>
+      <ion-input type="text" [(ngModel)]="fName"></ion-input>
+    </ion-item>
+
+    <ion-item>
+
+      <ion-label floating>
+        <ion-icon ios="ios-person-add" md="md-person-add"></ion-icon>
+        Last Name
+      </ion-label>
+      <ion-input [(ngModel)]="lName"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>
+        <ion-icon ios="ios-mail-open" md="md-mail-open"></ion-icon>
+        Email
+      </ion-label>
+      <ion-input [(ngModel)]="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+
+      <ion-label floating>
+        <ion-icon ios="ios-lock" md="md-lock"></ion-icon>
+        Password
+      </ion-label>
+      <ion-input [(ngModel)]="password" type="password"></ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label floating>
+        <ion-icon ios="ios-lock" md="md-lock"></ion-icon>
+        Confirm Password
+      </ion-label>
+      <ion-input [(ngModel)]="confirmPassword" type="password"></ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label floating>
+        <ion-icon ios="ios-transgender" md="md-transgender"></ion-icon>
+        Sex
+      </ion-label>
+      <ion-select [(ngModel)]="sex" type="text">
+        <ion-option value="Male">Male</ion-option>
+        <ion-option value="Female">Female</ion-option>
+        <ion-option value="Other">Other</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>
+        <ion-icon ios="ios-calendar" md="md-calendar"></ion-icon>
+        Date of Birth
+      </ion-label>
+      <ion-datetime displayFormat="DD/MM/YYYY" max="2020-12-31" pickerFormat="DD MM YYYY" [(ngModel)]="DOB"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>
+        <ion-icon ios="ios-flag" md="md-flag"></ion-icon>
+        Nationality
+      </ion-label>
+      <ion-select [(ngModel)]="nationality">
+        <ion-option *ngFor="let country of countries" [value]="country">{{country}}</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>
+        <ion-icon ios="ios-pricetag" md="md-pricetag"></ion-icon>
+        Hospital ID
+      </ion-label>
+      <ion-input [(ngModel)]="hosID"></ion-input>
+    </ion-item>
+
+
+    <button ion-button (click)="register()" class="continue-button"> Sign Up</button>
+
+  </ion-list>
+
+
+</ion-content>

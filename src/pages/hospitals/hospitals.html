@@ -1,0 +1,48 @@
+<ion-header>
+
+  <ion-navbar color=header>
+    <ion-title class="HospitalGroupheader">
+      <h5> {{hospitalGroup.region | uppercase}}</h5>
+    </ion-title>
+  </ion-navbar>
+
+
+
+</ion-header>
+
+
+<ion-content padding>
+
+
+
+  <div>
+
+
+    <ion-searchbar (ionInput)="getHospitals($event)"></ion-searchbar>
+
+    <ion-list>
+
+      <ion-card *ngFor="let hospital of hospitalGroup.hospitals; let i = index" class="card" (click)="onViewMore(hospital)">
+
+        <ion-card-header>
+          <ion-avatar item-left>
+            <img src="{{hospital.image}}" />
+          </ion-avatar>
+        </ion-card-header>
+
+        <ion-card-content>
+          <p class="pFont">{{hospital.hospitalName}}</p>
+          <p class="pFont">{{hospital.location}}</p>
+        </ion-card-content>
+
+        <!-- <ion-row>
+          <ion-col text-right></ion-col>
+          <button ion-button small (click)="onViewMore(hospital)" class="viewButton">View More</button>
+        </ion-row> -->
+
+      </ion-card>
+    </ion-list>
+  </div>
+
+
+</ion-content>

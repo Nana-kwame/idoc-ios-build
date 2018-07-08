@@ -1,0 +1,153 @@
+<ion-header>
+
+  <ion-navbar color="header">
+
+    <ion-title text-center class="header">
+      <h5>iDoc</h5>
+    </ion-title>
+    <ion-buttons start>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-buttons end>
+      <button ion-button (click)="onOpenLogin()">
+        <ion-icon name="md-person"></ion-icon>
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="content">
+  <div *ngIf='!loginParams'>
+
+    <ion-card class="pre-signIn">
+      <ion-card-header>
+        <div class="card-icon">
+          <ion-icon ios="ios-contact" md="md-contact"></ion-icon>
+        </div>
+      </ion-card-header>
+      <div class="card-title">
+        <h4>Welcome</h4>
+      </div>
+
+      <div class="card-content">
+        <p class="pFont">iDoc is the virtual medical assistant. It is the platform that connects you directly to the major hospitals close
+          to you. You can search hospitals and book appointements directly from the app, you can even search based on your
+          exisiting medical condition.
+        </p>
+      </div>
+    </ion-card>
+
+    <div class="sign-in">
+      <h6>Let's find the perfect hospital for that pesky head cold
+        <button ion-button outline small color="header" (click)="onOpenLogin()">SIGN IN</button>
+      </h6>
+    </div>
+
+  </div>
+
+  <div *ngIf='loginParams'>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-card class="userInfo">
+            <ion-item>
+              <ion-avatar item-start *ngIf='!profilePic'>
+                <img src="https://api.adorable.io/avatars/75/{{loginParams.user.fName}}" class="pic">
+              </ion-avatar>
+              <ion-avatar item-start *ngIf='profilePic'>
+                <img [src]="profilePic" class="profilePic">
+              </ion-avatar>
+              <h2>{{loginParams.user.fName}} {{loginParams.user.lName}}</h2>
+              <h5>Sex: {{loginParams.user.sex}}</h5>
+              <h5>Hospital ID: {{loginParams.user.hosID}}</h5>
+
+            </ion-item>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col text-center>
+        </ion-col>
+      </ion-row>
+
+
+
+
+      <ion-row>
+        <ion-col>
+          <ion-card class="medical-card">
+            <ion-card-header>
+              <div class="medical-card-icon">
+                <ion-icon ios="ios-filing" md="md-filing"></ion-icon>
+              </div>
+              <div class="card-header-text">
+                <h6>RECENT MEDICAL HISTORY</h6>
+                <hr class="divider" />
+              </div>
+            </ion-card-header>
+            <ion-card-content>
+              <div class="card-content-text" *ngFor="let res of responses">
+                <div>
+                  <ion-list *ngIf="responses.length !== 0">
+                    {{res.diagnosis}}
+                  </ion-list>
+                  <div *ngIf="responses.length == 0 ">
+                    <h5>Kindly visit a your local healthcare provider for any medical assistance you may need, and browse through
+                      our curated list of medical care providers</h5>
+                  </div>
+                </div>
+                
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <!-- <button ion-button round small (click)="onNoChange()" >Matches For Known Conditions?</button> -->
+          <ion-card class="watson-card" *ngIf="responses.length !== 0 " [hidden]=false>
+            <ion-card-header>
+              <div class="watson-card-header-text">
+                <div class="watson-medical-icon">
+                  <ion-icon ios="ios-medkit-outline" md="md-medkit"></ion-icon>
+                </div>
+                <h6>TOP MATCHES FOR CURRENT MEDICAL RECORD</h6>
+                <hr class="divider" />
+              </div>
+            </ion-card-header>
+            <div>
+              <ion-list class="output">
+                <h5>{{watsonHospitals}}</h5>
+              </ion-list>
+            </div>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+      <button ion-button round small (click)="onChange()">Something Troubling You Today?</button>
+      <div class="infermedica-input" [hidden]="input">
+        <ion-item>
+          <ion-label floating>
+            What seems to be the problem today
+          </ion-label>
+          <ion-input [(ngModel)]="complainText" type="text"></ion-input>
+        </ion-item>
+        <button ion-button small clear (click)="onTest()">Let's Find a Good Hospital</button>
+        <div *ngFor="let item of mention">
+          <ion-label>You are experiencing {{item.name}}</ion-label>
+          <ion-list class="searchOutput">
+            <h5>{{watsonHospitals}}</h5>
+          </ion-list>
+        </div>
+      </div>
+    </ion-grid>
+
+  </div>
+
+
+</ion-content>

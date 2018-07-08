@@ -1,0 +1,66 @@
+<ion-header>
+
+  <ion-navbar color="header">
+    <ion-title class="header">
+      <h5> Settings</h5>
+    </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div *ngIf="!loginParams">
+    <ion-card class="card">
+      <ion-card-header>
+        <div class="card-icon">
+          <ion-icon ios="ios-cog" md="md-cog"></ion-icon>
+        </div>
+      </ion-card-header>
+      <div class="card-title">
+        <h4>Settings</h4>
+      </div>
+
+      <div class="card-content">
+        <p class="pFont">Sign up to unlock secret functionality and manage your account for hospital check-ups and emergency services response</p>
+        <button ion-button class="button" color="header" (click)="onSignUp()">Sign Up</button>
+      </div>
+
+    </ion-card>
+    <div class="sign-in">
+      <h6>Already have an account?
+        <button ion-button outline small color="header" (click)="onLogin()">SIGN IN</button>
+      </h6>
+    </div>
+  </div>
+
+  <div *ngIf="loginParams">
+    <ion-list *ngIf="profilePic">
+      <ion-item>
+        <ion-thumbnail>
+          <img [src]="profilePic" item-start class="round">
+        </ion-thumbnail>
+        <button ion-button clear icon-only item-end>
+          <ion-icon name="arrow-forward"></ion-icon>
+        </button>
+      </ion-item>
+
+      <ion-item-sliding>
+
+        <ion-item-options side="right">
+          <button ion-button icon-only color="danger" (click)="deleteImage(image)">
+            <ion-icon name="trash"></ion-icon>
+          </button>
+        </ion-item-options>
+
+      </ion-item-sliding>
+    </ion-list>
+
+    <ion-fab right top>
+      <button ion-fab (click)="presentActionSheet()">
+        <ion-icon name="camera"></ion-icon>
+      </button>
+    </ion-fab>
+  </div>
+
+</ion-content>

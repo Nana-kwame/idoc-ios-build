@@ -1,0 +1,67 @@
+/*
+Theme Name: Medical Pro
+Theme URI: http://medicalpro.themedesigner.in
+Author: Themedesigner
+Author URI: http://www.themedesigner.in
+Description: MedicalPro theme which is a premium theme for health and medical related websites. MedicalPro has various features that are suitable for hospitals, doctors, surgeons, dentists, health clinics and other types of health and medical related institutions.
+Version: 2.1
+License: GNU General Public License v3.0 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Tags: blue, orange, right-sidebar, responsive-layout, featured-images, full-width-template, threaded-comments, post-formats, translation-ready, custom-menu, theme-options
+Text Domain: medical-pro
+Domain Path: /languages
+*/
+
+.wp-caption {}
+.wp-caption-text {}
+.gallery-caption {}
+.alignright {text-align: right;}
+.alignleft {text-align: left;}
+.aligncenter {text-align: center;}
+.sticky {
+  position: relative;
+  padding:20px !important;
+  border:1px solid #dadada
+}
+.sticky:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 150;
+  border-right: 40px solid #FE824C;
+  border-bottom: 40px solid transparent;
+}
+.sd-full-width {
+	margin: 0;
+	position: relative;
+	width: 100%;
+	-moz-box-sizing: border-box;
+		 box-sizing: border-box;
+}
+.wpb_revslider_element {
+	margin: 0 -15px;	
+}
+.sd-centered-wrapper {
+	margin: 0 -15px;
+}
+.sd-centered-wrapper .wpb_revslider_element {
+	margin: 0;
+}
+.wpb_row {
+		margin: 0;	
+	}
+	.wpb_wrapper {
+	position: relative;
+	z-index: 100;	
+}
+.wpb_wrapper .wpb_row {
+}
+.wpb_wrapper ul {
+	margin: 0;
+	padding: 0;
+}
+.wpb_row {
+	position: relative;
+}

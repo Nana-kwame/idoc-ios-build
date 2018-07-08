@@ -1,0 +1,87 @@
+<ion-header>
+
+  <ion-navbar color="header">
+    <ion-title class="header">
+      <h5>{{hospitalName}}</h5>
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="onAlert()" *ngIf="loginParams" class="alertButton">
+        <ion-icon name="md-notifications-outline"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content class="content">
+  <div>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-card>
+            <img width="580" height="180" src={{image}}/>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col text-center>
+          <h2>{{hospitalName}}</h2>
+          <div class="hospitalLocation">{{location}}</div>
+        </ion-col>
+      </ion-row>
+
+      <ion-item class="test">
+        <div>
+          <h5 end>Description</h5>
+        </div>
+      </ion-item>
+      <ion-row>
+        <ion-col>
+          <ion-list class="desc"><p>{{description}}</p></ion-list>
+        </ion-col>
+      </ion-row>
+
+
+      <ion-item class="test">
+        <div class="greySpace">
+          <h5>Service</h5>
+        </div>
+      </ion-item>
+      <ion-row>
+        <ion-col>
+          <ion-list class="desc"><p>{{service}}</p></ion-list>
+        </ion-col>
+      </ion-row>
+
+      <ion-item class="test">
+        <div>
+
+          <h5 end>Map</h5>
+        </div>
+
+      </ion-item>
+
+
+
+
+      <div #map id="googleMap" class="map"></div>
+      <ion-card>
+        <button ion-button  clear color="header" [hidden]="see">
+          <ion-label>Show Directions</ion-label>
+          <ion-icon name="eye" (click)="showDirections()"></ion-icon>
+        </button>
+
+        <button ion-button  clear color="header" [hidden]="noSee">
+          <ion-label>Hide Directions</ion-label>
+          <ion-icon name="eye-off" (click)="hideDirections()"></ion-icon>
+        </button>
+        <ion-card-content [hidden]="directionsHidden">
+          <div #directionsPanel></div>
+        </ion-card-content>
+      </ion-card>
+    </ion-grid>
+  </div>
+
+
+
+</ion-content>

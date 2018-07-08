@@ -1,0 +1,8 @@
+<ion-tabs #myTabs>
+    <ion-tab [root]="searchPage" tabTitle="Me" tabIcon="contact"  [rootParams]="loginParams"></ion-tab>
+    <ion-tab [root]="homePage" tabTitle="Search" tabIcon="search" [rootParams]="loginParams"> </ion-tab>
+    <ion-tab [root]="notificationsPage" tabTitle="Notifications" tabBadge={{notificationNumber}} tabIcon="notifications" [rootParams]="loginParams"></ion-tab>
+    <ion-tab [root]="settingsPage" tabTitle="Settings" tabIcon="settings" [rootParams]="loginParams"> </ion-tab>
+    
+     
+</ion-tabs>

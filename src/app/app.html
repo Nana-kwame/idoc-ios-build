@@ -1,0 +1,13 @@
+<ion-menu [content]="nav">
+  <ion-content>
+    <ion-list>
+      <button ion-item (click)="onLoad(startPage)">
+        <ion-icon name="disc" item-left></ion-icon>
+        Manual
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+
+<ion-nav [root]="tabsPage" #nav></ion-nav>

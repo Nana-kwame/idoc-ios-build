@@ -1,0 +1,195 @@
+page-search {
+  ion-content {
+    background: linear-gradient(to right, #EFEFF0, #eef2f3);
+  }
+  .header h5 {
+    font-size: 20px;
+    color: whitesmoke; //background: linear-gradient(to right, #da4453, #89216b);
+  }
+  .content .pre-signIn {
+    border-radius: 15px;
+    background: linear-gradient(to right, #0c457d, #66b2b2);
+  }
+  .card-icon {
+    margin-top: 10px;
+    font-size: 7em;
+    position: relative;
+    bottom: 30px;
+    left: 35%;
+  }
+  .card-icon ion-icon {
+    color: #154561;
+  }
+  .card-title {
+    position: relative;
+    left: 40%;
+    bottom: 30px;
+    margin-top: -35px;
+    padding-bottom: 30px;
+  }
+  .card-title h4 {
+    color: white;
+    font-weight: bold;
+    font-size: 2.5em;
+    position: relative;
+    right: 11%
+  }
+  .card-content {
+    position: relative;
+    left: 10%;
+    text-align: center;
+    bottom: 20px;
+    margin-top: -20px;
+    padding-bottom: 30px;
+    text-shadow: 0px 0px 1px rgba(175, 175, 175, 0.75);
+    font-size: 20%;
+    color: #41484b;
+    .button {
+      color: white;
+      position: relative;
+      right: 10%;
+    }
+  }
+  .happy {
+    color: #bc4e9c;
+  }
+  .sign-in h6 {
+    position: absolute;
+    top: 488px;
+    left: 8%;
+    padding-bottom: -9px;
+    color: #154561
+  }
+  .pic {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    left: 25%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  .profilePic {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    left: 25%;
+  }
+
+  .watson-card{
+    border-radius: 15px; 
+  }
+  .output {
+    background-color: white;
+    margin: 0;
+    width: 350px;
+    height: 300px;
+    border: 0px;
+    white-space: pre-wrap
+  }
+  .output h5 {
+    text-align: left;
+    position: relative;
+    left: 9px;
+    font-size: 1.75rem;
+    top: -100px;
+    font-family: -apple-system, ".SFNSText-Regular", 'Helvetica Neue', sans-serif;
+    content: attr(h5);
+    z-index: 20px;
+  }
+  .test {
+    margin: 0;
+    width: 100%;
+    height: 50px;
+    background: #DFE3E6;
+    h5 {
+      position: relative;
+      text-align: left;
+      top: 20%;
+      text-shadow: 0px 0px 1px rgba(4, 36, 49, 0.75);
+      font-size: 20px;
+      font-weight: 600;
+      color: #636e72;
+      text-transform: uppercase;
+    }
+  }
+  .card-header-text h6 {
+    font-size: 12px;
+    font-weight: 600;
+    color: #032835;
+    text-shadow: 0px 0px 1px rgba(175, 175, 175, 0.75);
+    position: relative;
+    left: 25px;
+    top: -15px;
+  }
+  .card-content-text {
+    font-size: 15px;
+    position: relative;
+    top: -10px;
+    text-align: justify
+  }
+  .medical-card {
+    border-radius: 15px;
+  }
+  .medical-card-icon {
+    font-size: 25px;
+    position: relative;
+    top: 10px;
+    color: #0082c8;
+  }
+  .watson-card-header-text h6 {
+    font-size: 12px;
+    font-weight: 600;
+    color: #032835;
+    text-shadow: 0px 0px 1px rgba(175, 175, 175, 0.75);
+    position: relative;
+    left: 20px;
+    top: -15px;
+  }
+  .watson-medical-icon {
+    font-size: 25px;
+    position: relative;
+    top: 10px;
+    left: -7.5px;
+    color: #0082c8;
+  }
+  .userInfo {
+    border-radius: 15px;
+    h2 {
+      text-transform: uppercase;
+      font-size: 1.095em;
+      font-weight: 450;
+      color: #032835;
+      text-shadow: 0px 0px 1px rgba(175, 175, 175, 0.75);
+    }
+    h5 {
+      position: relative;
+      font-size: 1.095em;
+      text-align: justify;
+    }
+  }
+  .pFont {
+    font-size: 20px;
+    color: white
+  }
+  .divider {
+    border: 10px;
+    height: 3px;
+    width: 100%;
+    background-color: #0082c8;
+    margin: 22px 0 20px;
+    position: relative;
+    top: -30px;
+  }
+  .no-record h5 {
+    position: relative;
+    left: -30px;
+    font-size: 1.095em;
+  }
+  .searchOutput{
+    white-space: pre-wrap
+  }
+}

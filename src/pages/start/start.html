@@ -1,0 +1,65 @@
+
+ 
+
+
+
+
+<ion-content padding>
+<ion-slides pager (ionSlideDidChange)= "slideChanged()" class="slider">
+  <ion-slide>
+    <div class="diag">
+   <ion-card>
+     <img src='assets/sliderImages/slider.jpg'/>
+   </ion-card>
+    </div>
+    
+    <div>
+      <h2>Getting Started with the iDoc</h2>
+      <p>Getting Started with the iDoc,Getting Started with the iDoc,Getting Started with the iDoc.</p>
+    </div>
+    </ion-slide>
+  
+    <ion-slide>
+    <div class="diag"  >
+   <ion-icon class="sliderIcon" ios="ios-analytics" md="md-analytics" color="primary"></ion-icon>
+    </div>
+    <div>
+      <h2> Me and the Health Data</h2>
+      <p>Getting Started with the iDoc,Getting Started with the iDoc,Getting Started with the iDoc.</p>
+    </div>
+    </ion-slide>
+  
+    <ion-slide>
+    <div class="diag" >
+   <ion-icon class="sliderIcon" ios="ios-magnet" md="md-magnet" color="primary"></ion-icon>
+    </div>
+    <div>
+      <h2>Search Top Hospitals and their services</h2>
+      <p>Getting Started with the iDoc,Getting Started with the iDoc,Getting Started with the iDoc.</p>
+    </div>
+    </ion-slide>
+  
+    <ion-slide>
+    <div class="diag"  >
+   <ion-icon class="sliderIcon" ios="ios-mail" md="md-mail" color="primary"></ion-icon>
+    </div>
+    <div>
+      <h2>Notification: Reminders and Appointments</h2>
+      <p>Getting Started with the iDoc,Getting Started with the iDoc,Getting Started with the iDoc.</p>
+    </div>
+    </ion-slide>
+  
+    <ion-slide>
+    <div class="diag">
+   <ion-icon class="sliderIcon" ios="ios-cog" md="md-cog" color="primary"></ion-icon>
+    </div>
+    <div>
+      <h2>Personalised settings to your style.</h2>
+      <p>Getting Started with the iDoc,Getting Started with the iDoc,Getting Started with the iDoc.</p>
+    </div>
+  
+  </ion-slide>
+  
+  </ion-slides>
+<button ion-button outline round (click)="skip()" id="skip">{{skipMsg}}</button>
+</ion-content>
